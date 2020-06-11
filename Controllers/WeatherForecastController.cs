@@ -17,7 +17,7 @@ namespace WebApplication1.Controllers
 
         private readonly RepositoryBase _repository;
 
-        public WeatherForecastController(TransientRepository repository)
+        public WeatherForecastController(SingletonRepository repository)
         //public WeatherForecastController(TransientRepository repository)
         {
             _repository = repository;
