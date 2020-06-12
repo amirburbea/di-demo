@@ -6,7 +6,8 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "transpile": "shx rm -rf lib && tsc -b tsconfig.json",
+    "clean": "shx rm -rf lib && shx rm -f tsconfig.tsbuildinfo",
+    "transpile": "yarn clean && tsc -b tsconfig.json",
     "start": "yarn transpile && webpack-dev-server --open --hot",
     "release": "yarn transpile && webpack --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
