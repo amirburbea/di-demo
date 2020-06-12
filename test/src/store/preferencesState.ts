@@ -1,5 +1,5 @@
 import { ThemeName } from '../themeName';
 
-export interface PreferencesState{
+export interface PreferencesState {
   themeName: ThemeName;
 }

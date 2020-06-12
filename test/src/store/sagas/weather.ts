@@ -55,8 +55,7 @@ function* makeRequest(
     yield call(onSuccess, result);
   } catch (error) {
     yield put(setError((error as Object).toString()));
-  }
-  finally{
+  } finally {
     yield put(setBusy(false));
   }
 }

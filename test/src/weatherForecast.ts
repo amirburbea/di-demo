@@ -1,5 +1,5 @@
-export interface WeatherForecast{
+export interface WeatherForecast {
   date: string;
   temperatureC: number;
-  summary:string;
+  summary: string;
 }

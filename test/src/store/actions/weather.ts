@@ -6,9 +6,7 @@ export const setData = createAction<WeatherForecast[] | undefined>(
   'WEATHER_SET_DATA'
 );
 export const setError = createAction<string | undefined>('WEATHER_SET_ERROR');
-export const setDataStatus = createAction<DataStatus>(
-  'WEATHER_SET_STATUS'
-);
+export const setDataStatus = createAction<DataStatus>('WEATHER_SET_STATUS');
 
 export const setupDatabase = createAction('WEATHER_SETUP_DB', () => {});
 export const tearDownDatabase = createAction('WEATHER_TEARDOWN_DB', () => {});
@@ -17,6 +15,6 @@ export const bulkInsertDatabase = createAction(
   () => {}
 );
 
-export const setBusy=createAction<boolean>('WEATHER_SET_BUSY');
+export const setBusy = createAction<boolean>('WEATHER_SET_BUSY');
 
 export const getData = createAction('WEATHER_GET_DATA', () => {});

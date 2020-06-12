@@ -1,8 +1,9 @@
 import {
-  Alignment, Button, Classes,
-
+  Alignment,
+  Button,
+  Classes,
   Navbar,
-  NavbarGroup
+  NavbarGroup,
 } from '@blueprintjs/core';
 import classNames from 'classnames';
 import React, { FunctionComponent, useCallback } from 'react';

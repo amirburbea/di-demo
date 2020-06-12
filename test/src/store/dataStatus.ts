@@ -1,5 +1,5 @@
-export enum DataStatus{
+export enum DataStatus {
   tornDown = 0,
   notLoaded,
-  loaded
+  loaded,
 }
