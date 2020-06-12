@@ -1,0 +1,6 @@
+.container {
+  &.busy {
+    opacity: 0.5;
+    cursor: wait;
+  }
+}

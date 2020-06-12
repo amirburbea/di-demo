@@ -1,59 +1,59 @@
 <html>
-  <head>
+<head>
     <title>TEST api</title>
-  </head>
-  <body>
+</head>
+<body>
     <button onclick="setup()">SETUP</button>
     <button onclick="bulkInsertData()">BULK INSERT DATA</button>
     <button onclick="getData()">GET DATA</button>
     <button onclick="tearDown()">TEARDOWN</button>
-  </body>
-  <script>
+</body>
+</html>
+<script>
     async function setup() {
-      const response = await window.fetch(
-        "http://localhost:5000/weatherforecast/setup",
-        { method: "POST" }
-      );
-      const { status } = response;
-      if (status != 200 && status != 204) {
-        alert(await response.text());
-      } else {
-        alert("Success");
-      }
+        const response = await window.fetch(
+            "http://localhost:5000/api/weatherforecast/setup",
+            { method: "POST" }
+        );
+        const { status } = response;
+        if (status != 200 && status != 204) {
+            alert(await response.text());
+        } else {
+            alert("Success");
+        }
     }
 
     async function bulkInsertData() {
-      const response = await window.fetch(
-        "http://localhost:5000/weatherforecast/bulkInsert",
-        { method: "POST" }
-      );
-      const { status } = response;
-      if (status != 200 && status != 204) {
-        alert(await response.text());
-      } else {
-        alert("Success");
-      }
+        const response = await window.fetch(
+            "http://localhost:5000/api/weatherforecast/bulkInsert",
+            { method: "POST" }
+        );
+        const { status } = response;
+        if (status != 200 && status != 204) {
+            alert(await response.text());
+        } else {
+            alert("Success");
+        }
     }
 
     async function getData() {
-      const response = await window.fetch(
-        "http://localhost:5000/weatherforecast/data",
-        { method: "GET" }
-      );
-      alert(await response.text());
+        const response = await window.fetch(
+            "http://localhost:5000/api/weatherforecast/data",
+            { method: "GET" }
+        );
+        alert(await response.text());
     }
 
     async function tearDown() {
-      const response = await window.fetch(
-        "http://localhost:5000/weatherforecast/tearDown",
-        { method: "POST" }
-      );
-      const { status } = response;
-      if (status != 200 && status != 204) {
-        alert(await response.text());
-      } else {
-        alert("Success");
-      }
+        const response = await window.fetch(
+            "http://localhost:5000/api/weatherforecast/tearDown",
+            { method: "POST" }
+        );
+        const { status } = response;
+        if (status != 200 && status != 204) {
+            alert(await response.text());
+        } else {
+            alert("Success");
+        }
     }
-  </script>
-</html>
+</script>

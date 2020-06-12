@@ -1,0 +1,52 @@
+@import '~@blueprintjs/core/lib/scss/variables';
+@import '~normalize.css/normalize.css';
+@import 'blueprintjs';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+#root {
+  height: inherit;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+
+  &-track {
+    background: $gray5;
+    border-radius: 5px;
+
+    .#{$ns}-dark & {
+      background-color: $dark-gray2;
+    }
+  }
+
+  &-thumb {
+    background: $gray1;
+    border-radius: 5px;
+
+    &:hover {
+      background: $gray2;
+      border-radius: 5px;
+    }
+  }
+
+  &-corner {
+    background: rgb(50, 50, 50);
+  }
+}

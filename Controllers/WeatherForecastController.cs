@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication1.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -35,8 +36,9 @@ namespace WebApplication1.Controllers
         }
 
         [HttpGet("data")]
-        public ObjectResult GetItems()
+        public async Task<ObjectResult> GetItems()
         {
+            await Task.Delay(1000);
             return this.Ok(this._repository.GetData<WeatherForecast>(nameof(WeatherForecast)));
         }
 

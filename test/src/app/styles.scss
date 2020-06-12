@@ -1,0 +1,21 @@
+@import '~@blueprintjs/core/lib/scss/variables';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+
+  > main {
+    flex-grow: 1;
+    overflow: hidden;
+    height: inherit;
+    width: 100%;
+    background-color: $light-gray5;
+
+    &:global(.#{$ns}-dark) {
+      background-color: $dark-gray2;
+    }
+  }
+}
